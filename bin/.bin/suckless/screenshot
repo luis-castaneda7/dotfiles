@@ -1,0 +1,3 @@
+#!/bin/sh
+
+maim -s ".screenshot.png" && feh ".screenshot.png" && rm .screenshot.png

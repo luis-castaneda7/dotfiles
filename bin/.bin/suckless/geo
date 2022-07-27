@@ -1,0 +1,5 @@
+#!/bin/sh
+
+/usr/libexec/geoclue-2.0/demos/agent &
+sleep 1 &
+redshift

@@ -1,0 +1,3 @@
+#!/bin/bash
+rm -f ~/.ghconfig/session_PREPROD && garcli force-new-session -e PREPROD
+rm -f ~/.ghconfig/session_PROD && garcli force-new-session -e PROD

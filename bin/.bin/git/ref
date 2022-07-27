@@ -1,0 +1,11 @@
+#!/bin/sh
+
+REF=`git rev-parse --short HEAD`
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  echo $REF | pbcopy
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  echo $REF | xclip
+fi
+
+echo $REF

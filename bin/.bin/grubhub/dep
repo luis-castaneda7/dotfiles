@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./gradlew $1:dependencyInsight --configuration runtimeClasspath --dependency $2

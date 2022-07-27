@@ -1,0 +1,32 @@
+#!/bin/bash
+
+a=$(nmcli device wifi list | awk 'FNR > 1 && FNR <= 21 {print}')
+
+
+IFS=$'\n'      # Change IFS to new line
+names=($a) # split to array $names
+
+
+case "$(echo "$a" | dmenu -l 20 -i -p "Wifi")" in
+	"${names[0]}")  nmcli -a device wifi connect $(echo "${names[0]}" | awk '{print $2}');;
+	"${names[1]}")  nmcli -a device wifi connect $(echo "${names[1]}" | awk '{print $2}');;
+	"${names[2]}")  nmcli -a device wifi connect $(echo "${names[2]}" | awk '{print $2}');;
+	"${names[3]}")  nmcli -a device wifi connect $(echo "${names[3]}" | awk '{print $2}');;
+	"${names[4]}")  nmcli -a device wifi connect $(echo "${names[4]}" | awk '{print $2}');;
+	"${names[5]}")  nmcli -a device wifi connect $(echo "${names[5]}" | awk '{print $2}');;
+	"${names[6]}")  nmcli -a device wifi connect $(echo "${names[6]}" | awk '{print $2}');;
+	"${names[7]}")  nmcli -a device wifi connect $(echo "${names[7]}" | awk '{print $2}');;
+	"${names[8]}")  nmcli -a device wifi connect $(echo "${names[8]}" | awk '{print $2}');;
+	"${names[9]}")  nmcli -a device wifi connect $(echo "${names[9]}" | awk '{print $2}');;
+	"${names[10]}") nmcli -a device wifi connect $(echo "${names[10]}" | awk '{print $2}');;
+	"${names[11]}") nmcli -a device wifi connect $(echo "${names[11]}" | awk '{print $2}');;
+	"${names[12]}") nmcli -a device wifi connect $(echo "${names[12]}" | awk '{print $2}');;
+	"${names[13]}") nmcli -a device wifi connect $(echo "${names[13]}" | awk '{print $2}');;
+	"${names[14]}") nmcli -a device wifi connect $(echo "${names[14]}" | awk '{print $2}');;
+	"${names[15]}") nmcli -a device wifi connect $(echo "${names[15]}" | awk '{print $2}');;
+	"${names[16]}") nmcli -a device wifi connect $(echo "${names[16]}" | awk '{print $2}');;
+	"${names[17]}") nmcli -a device wifi connect $(echo "${names[17]}" | awk '{print $2}');;
+	"${names[18]}") nmcli -a device wifi connect $(echo "${names[18]}" | awk '{print $2}');;
+	"${names[19]}") nmcli -a device wifi connect $(echo "${names[19]}" | awk '{print $2}');;
+esac
+

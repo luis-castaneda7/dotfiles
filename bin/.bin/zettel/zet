@@ -1,0 +1,28 @@
+#!/bin/sh
+
+if [ -z "$ZETTEL" ]
+then
+	echo "Please set ZETTEL env variable"
+	exit 0
+fi
+if [ -z "$1" ]
+then
+	echo "Include title"
+	exit 0
+fi
+
+TITLE=$1
+ISOSEC=`isosec`
+DIR="$ZETTEL/$ISOSEC"
+
+mkdir $DIR
+cd $DIR
+touch "${TITLE}.md"
+
+{
+cat << EOF 
+# $TITLE
+EOF
+} >> "${TITLE}.md"
+
+nvim "$DIR/${TITLE}.md"
