@@ -10,9 +10,10 @@ end
 function fullscreen()
     local tabcount = vim.fn.tabpagenr('$')
     local splitcount = vim.fn.tabpagewinnr(tabcount, '$')
+    local linenumber = vim.fn.line('.')
 
     if splitcount ~= 1 then
-        vim.cmd("tabedit %")
+        vim.cmd("tabedit +" .. string.format("%s", linenumber) .. " %")
     elseif tabcount == 1 then
         print("only one window open")
     else

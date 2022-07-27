@@ -138,6 +138,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/luis/.local/share/nvim/site/pack/packer/start/vim",
     url = "https://github.com/dracula/vim"
+  },
+  ["vim-autoclose"] = {
+    loaded = true,
+    path = "/home/luis/.local/share/nvim/site/pack/packer/start/vim-autoclose",
+    url = "https://github.com/townk/vim-autoclose"
   }
 }
 

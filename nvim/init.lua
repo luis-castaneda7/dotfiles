@@ -12,9 +12,9 @@ smartcase=true
 map("n", "<esc><esc>", ":nohl<CR>", { silent = true })
 
 --- spacing
-vim.cmd('set sts=4')
-vim.cmd('set sw=4')
-vim.cmd('set ts=4')
+vim.cmd('set sts=2')
+vim.cmd('set sw=2')
+vim.cmd('set ts=2')
 vim.cmd('set expandtab')
 vim.cmd('set wrap!')
 

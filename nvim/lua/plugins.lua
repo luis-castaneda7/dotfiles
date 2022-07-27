@@ -25,5 +25,8 @@ return require('packer').startup(function()
     -- treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
+    --vim-autoclose
+    use 'townk/vim-autoclose'
+
 
 end)
